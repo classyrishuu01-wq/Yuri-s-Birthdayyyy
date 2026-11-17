@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff2f5">
+<title>Happy Birthday Yuri 🌷</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Dancing+Script:wght@600;700&display=swap');
+:root{--pink:#c94f78;--deep:#963653;--pale:#fff1f4;--paper:#fffdfb;--ink:#604651;--muted:#a77c8c}
+*{box-sizing:border-box}body{margin:0;background:#fff7f8;color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+#musicBtn,.back{position:fixed;z-index:10;top:18px;border:1px solid #f0dce2;background:#ffffffc9;color:#875c6d;border-radius:50%;width:42px;height:42px;box-shadow:0 3px 12px #b8798a18}
+#musicBtn{right:18px}.back{left:18px}
+.screen{min-height:100svh;display:none;align-items:center;justify-content:center;padding:76px 18px 32px;background:radial-gradient(ellipse at 50% 35%,#fff 0,#fff7f8 66%,#fceef2 100%);position:relative}
+.screen.active{display:flex;animation:fade .55s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.wrap{width:min(760px,100%);text-align:center;position:relative;z-index:1}
+.script{font-family:'Dancing Script',cursive;color:var(--pink);font-weight:700}
+h1{font:700 clamp(2.7rem,9vw,5.4rem)/.98 'Playfair Display',serif;color:var(--deep);margin:12px 0 14px}
+h2{font:700 clamp(2rem,6vw,3.3rem)/1.08 'Playfair Display',serif;color:var(--deep);margin:8px 0 12px}
+.sub{font:italic 600 1rem 'Playfair Display',serif;color:#b88798;margin:0 auto 24px}
+.tag{display:inline-block;background:#f8dce5;color:#a34364;border:1px solid #f1c8d6;padding:8px 16px;border-radius:5px 14px 5px 14px;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;transform:rotate(-1.5deg)}
+.btn{border:0;background:linear-gradient(135deg,#d9507e,#ed8ba7);color:white;padding:12px 23px;border-radius:99px;font-weight:800;box-shadow:0 7px 16px #d86c8d30;margin:7px}
+.btn.light{background:#fff;color:#a84d6b;border:1px solid #f0cbd7;box-shadow:none}
+.iconbtn{border:0;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 4px 16px #c27b9224;color:#b54c70;font-size:1.25rem;margin:8px;transition:.2s}
+.iconbtn:active{transform:scale(.92)}
+.panel{background:#fffefa;border:1px solid #f4e5e8;border-radius:20px;padding:22px 20px;box-shadow:0 12px 35px #a45d7415;width:min(440px,100%);margin:18px auto}
+.reason-title{font:600 1.65rem 'Dancing Script',cursive;color:#563947;margin:0 0 7px}
+.reason-text{font:italic 500 .98rem 'Playfair Display',serif;line-height:1.6;margin:0}
+.bouquet{font-size:clamp(6rem,22vw,10rem);margin:12px auto 0;filter:drop-shadow(0 8px 8px #b45c7922);animation:sway 4s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(3deg) translateY(-5px)}}
+.reason-buttons{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin:18px 0 4px}
+.balloon-area{height:310px;display:flex;align-items:center;justify-content:center;gap:clamp(12px,5vw,34px);flex-wrap:wrap;padding:20px 0}
+.balloon{width:clamp(76px,18vw,112px);height:clamp(96px,22vw,138px);border:0;border-radius:52% 52% 48% 48%;background:linear-gradient(135deg,#ffe4ec,#ef9fba);position:relative;color:#a34265;font:700 1rem 'Dancing Script',cursive;box-shadow:inset -8px -10px 18px #d36c8b22,0 10px 22px #d36c8b20;animation:float 2.7s ease-in-out infinite}
+.balloon:nth-child(2){background:linear-gradient(135deg,#f7e8ff,#d9b9e8);animation-delay:-.8s}
+.balloon:nth-child(3){background:linear-gradient(135deg,#fff1d7,#f4c98b);animation-delay:-1.5s}
+.balloon:after{content:"";position:absolute;top:98%;left:50%;height:44px;border-left:1px solid #d8a0b2}
+@keyframes float{50%{transform:translateY(-12px)}}
+.balloon.popped{animation:pop .25s forwards;pointer-events:none}
+@keyframes pop{to{transform:scale(1.5);opacity:0}}
+.message-words{font:700 clamp(1.8rem,6vw,3rem) 'Dancing Script',cursive;color:var(--pink);min-height:55px;margin-top:12px}
+.wish{background:#fffdfb;border:1px solid #f1dfe4;border-radius:7px;padding:24px 22px;text-align:left;max-width:600px;margin:18px auto;box-shadow:0 8px 22px #9f5a7010;position:relative}
+.wish:before{content:"";position:absolute;inset:7px;border:1px dashed #f0cbd6;pointer-events:none}
+.wish h3{text-align:center;color:var(--deep);font:700 1.55rem 'Playfair Display',serif;margin:4px 0 16px}
+.wish p{font-size:.94rem;line-height:1.8;margin:8px 0}
+.sticker{position:absolute;font-size:2rem;opacity:.85}.sticker.one{left:4%;top:15%}.sticker.two{right:5%;top:17%}.sticker.three{left:7%;bottom:14%}.sticker.four{right:7%;bottom:13%}
+.cat{font-size:clamp(5rem,18vw,8rem);display:block;animation:catbob 2.5s ease-in-out infinite}
+@keyframes catbob{50%{transform:translateY(-8px) rotate(2deg)}}
+.choice{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.nope{transition:transform .18s}
+.lock-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:590px;margin:18px auto;align-items:stretch}
+.cat-photo{border:1px solid #f1dce4;border-radius:18px;background:#fff;padding:12px;display:flex;flex-direction:column;justify-content:center}
+.cat-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:7px solid #f8dce5}
+.photo-placeholder{aspect-ratio:1/1;border-radius:50%;background:#fff0f5;display:grid;place-items:center;font-size:5rem;border:7px solid #f8dce5}
+.keypad{background:#f7dce6;border-radius:18px;padding:15px}
+.code{display:flex;justify-content:center;gap:6px;margin:10px 0 14px}
+.code i{width:27px;height:31px;border:1px solid #dba6b8;border-radius:6px;background:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;color:var(--deep)}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.keys button{border:0;border-radius:50%;width:38px;height:38px;margin:auto;background:#fff;color:#7b4c60;font-weight:800;box-shadow:0 2px 5px #a6537018}
+.unlock{border:0;border-radius:99px;background:#fff;color:#98506a;padding:8px 16px;font-weight:800;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:620px;margin:22px auto}
+.photo-card{border:1px solid #f1dce4;background:#fff;padding:8px;border-radius:15px;box-shadow:0 7px 20px #a45d7410;transform:rotate(-1deg)}
+.photo-card:nth-child(2){transform:translateY(12px) rotate(1deg)}
+.photo-card:nth-child(3){transform:rotate(-1.5deg)}
+.photo-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:#fff0f5}
+.photo-card figcaption{font:600 .9rem 'Dancing Script',cursive;color:var(--pink);padding:8px 2px 3px}
+.photo-hint{font-size:.78rem;color:#ad8795;margin-top:12px}
+.hidden{display:none!important}.foot{font-size:.8rem;color:#b18a99;margin-top:18px}
+@media(max-width:500px){.gallery{gap:7px}.photo-card{padding:5px;border-radius:11px}.photo-card figcaption{font-size:.78rem}.lock-layout{grid-template-columns:1fr;max-width:300px}.cat-photo{padding:10px}.cat-photo img,.photo-placeholder{max-width:190px;margin:auto}.wish{padding:20px 17px}.balloon-area{height:270px}}
+</style></head>
+<body>
+<button class="back" id="backBtn" aria-label="Go back">←</button><button id="musicBtn" aria-label="Toggle music">♫</button>
+<audio id="music" loop><source src="music.mp3" type="audio/mpeg"></audio>
+<section class="screen active" id="s1"><div class="wrap">
+ <div class="tag">✦ a little birthday surprise ✦</div>
+ <h1>Happy Birthday<br>Yuri! 🌷</h1><p class="sub">A small page, with lots of best-friend energy.</p>
+ <div class="bouquet">💐</div><p class="script" style="font-size:1.55rem">Made just for you</p>
+ <button class="btn" data-next="s2">Open your surprise →</button>
+</div></section>
+<section class="screen" id="s3"><div class="wrap">
+ <h2 class="script">A few little reasons why you're special 🌷</h2><p class="sub">Tap each button to reveal a reason.</p>
+ <div class="reason-buttons"><button class="iconbtn" data-reason="0">♡</button><button class="iconbtn" data-reason="1">✧</button><button class="iconbtn" data-reason="2">☻</button><button class="iconbtn" data-reason="3">☆</button></div>
+ <div class="panel"><h3 class="reason-title" id="reasonTitle">Your Warm Heart</h3><p class="reason-text" id="reasonText">Your kindness, fun nature and the good energy you bring make every conversation brighter.</p></div>
+ <div class="bouquet">💐</div><button class="btn" data-next="s4">Continue →</button>
+</div></section>
+<section class="screen" id="s4"><div class="wrap">
+ <p class="sub">A gentle reminder, made just for you</p><h2>Pop the Balloons</h2><p class="script" style="font-size:1.5rem">and reveal a little birthday message…</p>
+ <div class="balloon-area"><button class="balloon" data-word="You">♡</button><button class="balloon" data-word="make">✦</button><button class="balloon" data-word="life">♡</button><button class="balloon" data-word="beautiful">✧</button></div>
+ <div class="message-words" id="words">Pop all 4 balloons</div><button class="btn hidden" id="balloonNext" data-next="s5">Continue →</button>
+</div></section>
+<section class="screen" id="s5"><span class="sticker one">📷</span><span class="sticker two">♡</span><span class="sticker three">🍒</span><span class="sticker four">🍭</span><div class="wrap">
+ <div class="tag">✦ birthday wishes ✦</div><div class="wish"><h3>MY WISH FOR YOU</h3>
+ <p><b>Happiest birthday, Yuri! 🎂</b></p>
+ <p>Wishing you a year full of happiness, laughter, new adventures and little moments that turn into beautiful memories.</p>
+ <p>Keep being your funny, kind and wonderfully unique self. May good things find you, may your dreams keep growing, and may you always have reasons to smile.</p>
+ <p>Thanks for all the laughs, random conversations and lovely memories. Here's to more fun and many more birthday celebrations!</p>
+ <p style="text-align:right;font-family:'Dancing Script';font-size:1.3rem;color:var(--pink)">Your friend, always ✨</p></div>
+ <button class="btn" data-next="s6">One more thing… →</button>
+</div></section>
+<section class="screen" id="s6"><div class="wrap">
+ <div class="tag">✦ little memory lane ✦</div><h2>I stole your some photos 📸</h2>
+ <p class="sub">A few pictures to keep the smiles coming.</p>
+ <div class="gallery">
+  <figure class="photo-card"><img src="photo1.jpg" alt="Favourite memory one"><figcaption>Memory no. 1 ♡</figcaption></figure>
+  <figure class="photo-card"><img src="photo2.jpg" alt="Favourite memory two"><figcaption>Memory no. 2 ✨</figcaption></figure>
+  <figure class="photo-card"><img src="photo3.jpg" alt="Favourite memory three"><figcaption>Memory no. 3 🌷</figcaption></figure>
+ </div>
+ <p class="photo-hint">Keep these three photos in the same folder as this HTML file, named photo1.jpg, photo2.jpg and photo3.jpg.</p>
+ <button class="btn" data-next="s7">One more thing… →</button>
+</div></section>
+<section class="screen" id="s7"><div class="wrap">
+ <div class="tag">✦ a tiny surprise ✦</div><h2>I made something special for you…</h2><p class="sub">Do you wanna open it?</p>
+ <div class="cat">🐱🎁🐱</div><div class="choice"><button class="btn" id="yesBtn">YES! 💗</button><button class="btn nope light" id="noBtn">NO 🙈</button></div>
+ <p class="foot" id="choiceText"></p>
+ <div class="panel hidden" id="lastSurprise">
+  <div class="cat" style="font-size:3.5rem">🐱💌🐾</div>
+  <h3 class="reason-title">A little note for you, Yuri 💗</h3>
+  <p class="reason-text">I hope this tiny website makes you smile today. Even from miles away, I’m sending you the biggest birthday wishes. Keep being your goofy, kind and amazing self. Here’s to more random chats, endless laughs and memories we haven’t made yet! 🎂✨</p>
+  <div class="tag">✦ happiest birthday, bestie ✦</div>
+ </div>
+</div></section>
+<section class="screen" id="s2"><div class="wrap">
+ <div class="tag">✦ top secret ✦</div><h2>Only Yuri can unlock this 🐾</h2><p class="sub">Enter the birthday passcode</p>
+ <div class="lock-layout"><div class="cat-photo"><div class="photo-placeholder" style="font-size:5rem;line-height:1.5">🐱<br>🐾</div><p class="script">A little cat love for you</p></div>
+ <div class="keypad"><p style="margin:2px;font-weight:700">Enter passcode</p><div class="code" id="code"><i>•</i><i>•</i><i>•</i><i>•</i></div><div class="keys" id="keys"></div><button class="unlock" id="unlock">UNLOCK ♡</button><p class="foot" id="lockMsg">Hint: a special 4-digit number</p></div></div>
+ <div class="panel hidden" id="finalMessage"><h3 class="reason-title">Surprise unlocked! 🎉</h3><p class="reason-text">Yuri, you're officially awarded the title of <b>Best-Friend Legend</b>. Keep smiling, keep shining and have the happiest birthday ever! 🐾💗</p><button class="btn" data-next="s3">Continue to your surprises →</button></div>
+</div></section>
+<script>
+const screens=['s1','s2','s3','s4','s5','s6','s7'];let current=0;
+function go(id){current=screens.indexOf(id);screens.forEach(x=>document.getElementById(x).classList.toggle('active',x===id));document.getElementById('backBtn').style.display=current===0?'none':'block';window.scrollTo(0,0)}
+function bindNext(){document.querySelectorAll('[data-next]').forEach(b=>{if(!b.dataset.bound){b.dataset.bound='1';b.addEventListener('click',()=>go(b.dataset.next))}})}bindNext();document.getElementById('backBtn').onclick=()=>go(screens[Math.max(0,current-1)]);
+go('s1');
+const reasons=[['Your Warm Heart','Your kindness, fun nature and the good energy you bring make every conversation brighter.'],['Your Smile','Your smile has a way of making even an ordinary day feel a little better.'],['Your Fun Side','The random talks, silly jokes and unexpected laughs are always a whole vibe.'],['Simply You','You are one of a kind. Never stop being your lovely, wonderfully unique self.']];
+document.querySelectorAll('[data-reason]').forEach(b=>b.onclick=()=>{let r=reasons[+b.dataset.reason];document.getElementById('reasonTitle').textContent=r[0];document.getElementById('reasonText').textContent=r[1];document.querySelectorAll('[data-reason]').forEach(x=>x.style.background='#fff');b.style.background='#f9e4eb'});
+let popped=0;document.querySelectorAll('.balloon').forEach(b=>b.onclick=()=>{if(b.classList.contains('popped'))return;b.classList.add('popped');popped++;document.getElementById('words').textContent=popped<4?`${popped} of 4 balloons popped`:'You make life beautiful 💗';if(popped===4)document.getElementById('balloonNext').classList.remove('hidden')});
+document.getElementById('yesBtn').onclick=()=>{const btn=document.getElementById('yesBtn'),note=document.getElementById('lastSurprise');if(!note.classList.contains('hidden'))return;document.getElementById('choiceText').textContent='Surprise! You deserve all the happiness, Yuri! 🐱💗';btn.textContent='Awww! 💗';note.classList.remove('hidden');note.scrollIntoView({behavior:'smooth',block:'center'});};document.getElementById('noBtn').onclick=()=>{document.getElementById('choiceText').textContent='Hehe, the curious cat says try YES! 😹';document.getElementById('noBtn').style.transform='translateX(9px)';setTimeout(()=>document.getElementById('noBtn').style.transform='',220)};
+const audio=document.getElementById('music'),musicBtn=document.getElementById('musicBtn');musicBtn.onclick=async()=>{if(audio.paused){try{await audio.play();musicBtn.textContent='Ⅱ'}catch(e){musicBtn.textContent='♫'}}else{audio.pause();musicBtn.textContent='♫'}};
+let entered='';const code=document.getElementById('code');function renderCode(){[...code.children].forEach((x,i)=>x.textContent=entered[i]?'●':'•')}
+const keys=document.getElementById('keys');['1','2','3','4','5','6','7','8','9','*','0','#'].forEach(k=>{let b=document.createElement('button');b.textContent=k;b.onclick=()=>{if(k==='*'){entered=entered.slice(0,-1)}else if(k!=='#'&&entered.length<4){entered+=k}renderCode()};keys.append(b)});
+document.getElementById('unlock').onclick=()=>{if(entered==='1711'){document.getElementById('finalMessage').classList.remove('hidden');document.getElementById('lockMsg').textContent='Unlocked! Happy birthday Yuri! 🎉';bindNext()}else{document.getElementById('lockMsg').textContent='Not quite! Try again 💗';entered='';renderCode()}};
+</script></body></html>
